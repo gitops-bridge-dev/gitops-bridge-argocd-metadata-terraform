@@ -19,7 +19,7 @@ locals {
 }
 
 locals {
-  argocd_server_config = <<-EOT
+  config = <<-EOT
     {
       "tlsClientConfig": {
         "insecure": false
@@ -38,7 +38,7 @@ locals {
     stringData = {
       name   = var.cluster_name
       server = try(var.argocd.server, "https://kubernetes.default.svc")
-      config = try(var.argocd.argocd_server_config, local.argocd_server_config)
+      config = try(var.argocd.config, local.config)
     }
   }
 }
