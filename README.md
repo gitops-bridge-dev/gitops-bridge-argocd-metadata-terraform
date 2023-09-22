@@ -1,3 +1,6 @@
+# Deprecated
+Functionality merged into a single terraform module https://github.com/gitops-bridge-dev/gitops-bridge/pull/28
+
 # gitops-bridge-argocd-metadata-terraform
 Terraform module for gitops-bridge argocd metadata
 
